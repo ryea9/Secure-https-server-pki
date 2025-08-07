@@ -33,7 +33,8 @@ genrsa: Command to generate an RSA private key.
 out ca.key: Specifies the output filename for the private key.
 2048: The length of the key in bits.
 
-**1.2. Create the CA's Self-Signed Root Certificate:
+**1.2. Create the CA's Self-Signed Root Certificate:**
+
 Using the private key, we generate a self-signed root certificate. This certificate contains the CA's public key and its identity information. Being self-signed, it forms the beginning of the chain of trust.
 
 openssl req -new -x509 -days 365 -key ca.key -out ca.crt
